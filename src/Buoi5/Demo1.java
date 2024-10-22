@@ -66,11 +66,13 @@ public class Demo1 {
     }
 
     public static void khongChiDinhEpKieu(String[] args) {
-        int In = 120;
-        long ll = In; // không yêu cầu chỉ định ép kiểu
+        int in = 120;
+        long ll = in; // không yêu cầu chỉ định ép kiểu
         float fl = ll; // không yêu cầu chỉ định ép kiểu
 
-        System.out.println("Gia tro Long: " + ll);
+        System.out.println("Gia tri Int: " + in);
+        System.out.println("Gia tri Float: " + fl);
+        System.out.println("Gia tri Long: " + ll);
     }
 
     public static void main(String[] args) {
