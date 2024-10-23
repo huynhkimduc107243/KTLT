@@ -57,6 +57,7 @@ public class Demo1 {
         System.out.println(a);
     }
 
+    // Thu hẹp (Narrowing) double -> float -> long -> int -> short -> byte
     public static void chiDinhEpKieu(String[] args) {
         double dou = 120;
         long lo = (long)dou; // yêu cẩu chỉ định ép kiểu long
@@ -65,6 +66,7 @@ public class Demo1 {
         System.out.println("Gia tri Int: " + in);
     }
 
+    // Nới rộng (Widening) byte -> short -> int -> long -> float -> double
     public static void khongChiDinhEpKieu(String[] args) {
         int in = 120;
         long ll = in; // không yêu cầu chỉ định ép kiểu
