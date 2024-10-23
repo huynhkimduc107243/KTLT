@@ -91,14 +91,18 @@ public class Demo1 {
 
     // Chuyển từ Int, Long, Double, Float, Short sang String
     public static void chuyenDoiKieu2(String[] args) {
-        int num = 200;
+        int in = 200;
+        long ll = 9991991991L;
+        short sh = 999;
+        float fl = 999.999F;
+        double db = 999.999D;
 
         // Sử dụng String.valueOf() hoac Integer.toString(), Long.toString(), Double.toString(), Float.toString(), Short.toString()
-        System.out.println("\nGia tri sau khi chuyen Int co gia tri 200 thanh String: " + Integer.toString(num));
-        System.out.println("Gia tri sau khi chuyen Long co gia tri 200 thanh String: " + Long.toString(num));
-        System.out.println("Gia tri sau khi chuyen Double co gia tri 200 thanh String: " + Double.toString(num));
-        System.out.println("Gia tri sau khi chuyen Float co gia tri 200 thanh String: " + Float.toString(num));
-        System.out.println("Gia tri sau khi chuyen Short co gia tri 200 thanh String: " + String.valueOf(num));
+        System.out.println("\nGia tri sau khi chuyen Int co gia tri 200 thanh String: " + Integer.toString(in));
+        System.out.println("Gia tri sau khi chuyen Long co gia tri 200 thanh String: " + Long.toString(ll));
+        System.out.println("Gia tri sau khi chuyen Double co gia tri 200 thanh String: " + Double.toString(sh));
+        System.out.println("Gia tri sau khi chuyen Float co gia tri 200 thanh String: " + Float.toString(fl));
+        System.out.println("Gia tri sau khi chuyen Short co gia tri 200 thanh String: " + String.valueOf(db));
     }
     public static void main(String[] args) {
         viDu1();
