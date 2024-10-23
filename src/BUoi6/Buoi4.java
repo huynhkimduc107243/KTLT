@@ -1,4 +1,4 @@
-package BUoi6;
+package Buoi6;
 
 import java.util.Scanner;
 
@@ -25,13 +25,18 @@ public class Buoi4 {
         }
     }
 
+    public static void bai4_3NC(int n) {
+        
+    }
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int num;
-        bai4_1();
-        bai4_2();
         System.out.print("\nNhap so phan tu cua mang: ");
         num = sc.nextInt();
+
+        bai4_1();
+        bai4_2();
         bai4_2NC(num);
     }
 }
