@@ -1,4 +1,6 @@
-package Buoi6;
+package BUoi6;
+
+import java.util.Scanner;
 
 public class Buoi4 {
     public static void bai4_1() {
@@ -10,15 +12,26 @@ public class Buoi4 {
     }
 
     public static void bai4_2() {
-        String nguHanh[]={3, 5, 8, 10, 14, 25};
-        int sum = 0;
-        for (int i = 0; i < arr.length; i++) {
-            sum += arr[i];
+        String nguHanh[]={"Kim", "Moc", "Thuy", "Hoa", "Tho"};
+        for (int i = 0; i < nguHanh.length; i++) {
+            System.out.printf("\nNgu hanh [%d] la: %s", i, nguHanh[i]);
         }
-        System.out.printf("Tong cac phan tu cua mang la: %d", sum);
+    }
+
+    public static void bai4_2NC(int n) {
+        System.out.printf("Danh sach cac phan tu tu 1 den %d: ", n);
+        for (int i = 1; i <= n; i++) {
+            System.out.print("\t" + i);
+        }
     }
 
     public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int num;
         bai4_1();
+        bai4_2();
+        System.out.print("\nNhap so phan tu cua mang: ");
+        num = sc.nextInt();
+        bai4_2NC(num);
     }
 }
