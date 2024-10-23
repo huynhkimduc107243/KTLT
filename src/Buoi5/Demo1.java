@@ -1,6 +1,7 @@
 package Buoi5;
 
 public class Demo1 {
+    // Toán tử (ví dụ 1-7)
     public static void viDu1() {
         int a = 3;
 
@@ -63,7 +64,7 @@ public class Demo1 {
         long lo = (long)dou; // yêu cẩu chỉ định ép kiểu long
         int in = (int)lo; // yêu cầu chỉ định ép kiểu int
 
-        System.out.println("Gia tri Int: " + in);
+        System.out.println("\nGia tri Int: " + in);
     }
 
     // Nới rộng (Widening) byte -> short -> int -> long -> float -> double
@@ -72,11 +73,33 @@ public class Demo1 {
         long ll = in; // không yêu cầu chỉ định ép kiểu
         float fl = ll; // không yêu cầu chỉ định ép kiểu
 
-        System.out.println("Gia tri Int: " + in);
+        System.out.println("\nGia tri Int: " + in);
         System.out.println("Gia tri Float: " + fl);
         System.out.println("Gia tri Long: " + ll);
     }
 
+    // Chuyển từ String sang Int, Long, Double, Float, Short
+    public static void chuyenDoiKieu1(String[] args) {
+        String str = "200";
+         // Sử dụng Integer.parseInt(), Long.parseLong(), Double.parseDouble(), Float.parseFloat(), Short.parseShort()
+        System.out.println("\nGia tri sau khi chuyen string co gia tri 200 thanh Int: " + Integer.parseInt(str));
+        System.out.println("Gia tri sau khi chuyen string co gia tri 200 thanh Long: " + Long.parseLong(str));
+        System.out.println("Gia tri sau khi chuyen string co gia tri 200 thanh Double: " + Double.parseDouble(str));
+        System.out.println("Gia tri sau khi chuyen string co gia tri 200 thanh Float: " + Float.parseFloat(str));
+        System.out.println("Gia tri sau khi chuyen string co gia tri 200 thanh Short: " + Short.parseShort(str));
+    }
+
+    // Chuyển từ Int, Long, Double, Float, Short sang String
+    public static void chuyenDoiKieu2(String[] args) {
+        int num = 200;
+
+        // Sử dụng String.valueOf() hoac Integer.toString(), Long.toString(), Double.toString(), Float.toString(), Short.toString()
+        System.out.println("\nGia tri sau khi chuyen Int co gia tri 200 thanh String: " + Integer.toString(num));
+        System.out.println("Gia tri sau khi chuyen Long co gia tri 200 thanh String: " + Long.toString(num));
+        System.out.println("Gia tri sau khi chuyen Double co gia tri 200 thanh String: " + Double.toString(num));
+        System.out.println("Gia tri sau khi chuyen Float co gia tri 200 thanh String: " + Float.toString(num));
+        System.out.println("Gia tri sau khi chuyen Short co gia tri 200 thanh String: " + String.valueOf(num));
+    }
     public static void main(String[] args) {
         viDu1();
         viDu2();
@@ -85,5 +108,7 @@ public class Demo1 {
         viDu7();
         chiDinhEpKieu(args);
         khongChiDinhEpKieu(args);
+        chuyenDoiKieu1(args);
+        chuyenDoiKieu2(args);
     }
 }
