@@ -26,14 +26,14 @@ public class Bai5_2 {
 
     public static void viDu3() {
         int a = 0, b, c;
-        ++a;
-        b = a;
-        c = ++a;
+        ++a; // a = 0 sau đó a = 0 + 1
+        b = a; // gán b = a = 1
+        c = ++a; // gán c = a + 1 = 2, gán lại a = 2
 
         System.out.println("\nEx 3:");
-        System.out.println(a); // a = 0 -> 1
-        System.out.println(b); // gán b = a
-        System.out.println(c); // gán c = a + 1
+        System.out.println(a);
+        System.out.println(b);
+        System.out.println(c);
     }
 
     public static void viDu4() {
@@ -50,9 +50,9 @@ public class Bai5_2 {
 
     public static void viDu5() {
         int a = 0, b, c;
-        ++a;
-        b = ++a;
-        c = b++;
+        ++a; // a = 0, sau đó a + 1
+        b = ++a; // gán b = a + 1 = 2
+        c = b++; // c = b = 2, sau đó b + 1 = 3
         System.out.println("\nEx5:");
         System.out.println(a); // a = 0 -> 1
         System.out.println(b); // gán b = 1 + 1 = 2, a = 2
