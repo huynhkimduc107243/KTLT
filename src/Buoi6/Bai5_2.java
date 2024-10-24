@@ -14,14 +14,14 @@ public class Bai5_2 {
 
     public static void viDu2() {
         int a = 0, b, c;
-        a++;
-        b = a;
-        c = a++;
+        a++; // a = 1 sau đó a = 0 + 1
+        b = a; // gán b = a
+        c = a++; // gán c = a sau đó a + 1 = 2
 
         System.out.println("\nEx 2:");
-        System.out.println(a); // a = 1
-        System.out.println(b); // gán b = a
-        System.out.println(c); // gán c = a rồi +1
+        System.out.println(a); 
+        System.out.println(b); 
+        System.out.println(c);
     }
 
     public static void viDu3() {
@@ -38,14 +38,14 @@ public class Bai5_2 {
 
     public static void viDu4() {
         int a = 0, b, c;
-        ++a;
-        b = ++a;
-        c = ++a;
+        ++a; // a = 0 -> 1
+        b = ++a; // gán b = a + 1 = 2
+        c = ++a; // gán c = a + 1 = 3
 
         System.out.println("\nEx4:");
-        System.out.println(a); // a = 0 -> 1
-        System.out.println(b); // gán b = a + 1 = 2
-        System.out.println(c); // gán c = 3 + 1 = 3
+        System.out.println(a);
+        System.out.println(b); 
+        System.out.println(c); 
     }
 
     public static void viDu5() {
@@ -53,20 +53,30 @@ public class Bai5_2 {
         ++a;
         b = ++a;
         c = b++;
-        System.out.println("\nEx");
-        System.out.println(a); //
-        System.out.println(b);
-        System.out.println(c);
+        System.out.println("\nEx5:");
+        System.out.println(a); // a = 0 -> 1
+        System.out.println(b); // gán b = 1 + 1 = 2, a = 2
+        System.out.println(c); // gán c = b = 2 rồi +1
     }
 
     public static void viDu6() {
         int a = 0, b, c;
-        ++a;
-        b = ++a;
-        c = b++;
-        System.out.println("\nEx 6:");
+        ++a; // a = 0 -> 1
+        b = a++; // gán b = a = 1, a = 1 + 1 = 2
+        c = b++; // c = 1, b + 1 = 2 gán cho b
+        c += c; // c += c = 1 + 1 = 2
+        System.out.println("\nEx6:");
         System.out.println(a);
-        System.out.println(b);
-        System.out.println(c);
+        System.out.println(b); 
+        System.out.println(c); 
+    }
+
+    public static void main(String[] args) {
+        viDu1();
+        viDu2();
+        viDu3();
+        viDu4();
+        viDu5();
+        viDu6();
     }
 }
