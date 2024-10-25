@@ -110,5 +110,6 @@ public class Buoi4 {
         bai4_4NC(n);
         bai4_5NC(n);
         bai4_6NC(n);
+        sc.close();
     }
 }
