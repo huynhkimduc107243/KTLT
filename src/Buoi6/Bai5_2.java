@@ -19,8 +19,8 @@ public class Bai5_2 {
         c = a++; // gán c = a sau đó a + 1 = 2
 
         System.out.println("\nEx 2:");
-        System.out.println(a); 
-        System.out.println(b); 
+        System.out.println(a);
+        System.out.println(b);
         System.out.println(c);
     }
 
@@ -44,8 +44,8 @@ public class Bai5_2 {
 
         System.out.println("\nEx4:");
         System.out.println(a);
-        System.out.println(b); 
-        System.out.println(c); 
+        System.out.println(b);
+        System.out.println(c);
     }
 
     public static void viDu5() {
@@ -67,8 +67,8 @@ public class Bai5_2 {
         c += c; // c += c = 1 + 1 = 2
         System.out.println("\nEx6:");
         System.out.println(a);
-        System.out.println(b); 
-        System.out.println(c); 
+        System.out.println(b);
+        System.out.println(c);
     }
 
     public static void main(String[] args) {
