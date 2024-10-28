@@ -2,7 +2,7 @@ package Buoi1;
 
 import java.util.Scanner;
 
-public class Practice {
+public class practice {
     private static final Scanner sc = new Scanner(System.in);
     private static final double PI = 3.14d;
 
