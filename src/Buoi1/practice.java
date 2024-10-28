@@ -43,7 +43,7 @@ public class practice {
             System.out.printf("\nSo lon nhat trong 2 so %d va %d la: %d", a, b, b);
         }
 
-        // Cach 2: toán tử 3 ngôi - ternary operator (btđk ? gt1 : gt2)
+        // Cach 2: toan tu 3 ngoi - ternary operator (btđk ? gt1 : gt2)
         System.out.printf("\nSo lon nhat trong 2 so %d va %d la: %d", a, b, (a > b ? a : b));
     }
 
