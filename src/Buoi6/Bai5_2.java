@@ -1,7 +1,8 @@
 package Buoi6;
 
 public class Bai5_2 {
-    public static void viDu1() {
+    public static void viDu1()
+    {
         int a = 3;
 
         System.out.println("Ex 1:");
@@ -11,7 +12,8 @@ public class Bai5_2 {
         System.out.println(++a + 1); // 8
     }
 
-    public static void viDu2() {
+    public static void viDu2()
+    {
         int a = 0, b, c;
         a++;
         b = a; // b = 1
@@ -23,7 +25,8 @@ public class Bai5_2 {
         System.out.println(c); // 1
     }
 
-    public static void viDu3() {
+    public static void viDu3()
+    {
         int a = 0, b, c;
         ++a; // a = 1
         b = a; // b = 1
@@ -35,7 +38,8 @@ public class Bai5_2 {
         System.out.println(c); // 2
     }
 
-    public static void viDu4() {
+    public static void viDu4()
+    {
         int a = 0, b, c;
         ++a; // a = 1
         b = ++a; // b = 2, a = 2
@@ -47,7 +51,8 @@ public class Bai5_2 {
         System.out.println(c); // 3
     }
 
-    public static void viDu5() {
+    public static void viDu5()
+    {
         int a = 0, b, c;
         ++a; // a = 1
         b = ++a; // b = 2, a = 2
@@ -59,7 +64,8 @@ public class Bai5_2 {
         System.out.println(c); // 2
     }
 
-    public static void viDu6() {
+    public static void viDu6()
+    {
         int a = 0, b, c;
         ++a; // a = 1
         b = a++; // b = 1, a = 2
@@ -72,7 +78,8 @@ public class Bai5_2 {
         System.out.println(c); // 2
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args)
+    {
         viDu1();
         viDu2();
         viDu3();

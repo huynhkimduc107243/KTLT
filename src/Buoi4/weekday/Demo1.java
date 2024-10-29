@@ -1,26 +1,32 @@
 package Buoi4.weekday;
 
 // Định nghĩa enum chứa các thứ trong tuần bên ngoài lớp
-enum Weekday2 {
+enum Weekday2
+{
     MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY;
 }
 
-public class Demo1 {
+public class Demo1
+{
     // Định nghĩa enum chứa các thứ trong tuần bên trong lớp
-    enum Weekday {
+    enum Weekday
+    {
         MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY;
     }
 
     // Khởi tạo giá trị cho hằng số enum
-    enum Weekday4 {
+    enum Weekday4
+    {
         MONDAY(2), TUESDAY(3), WEDNESDAY(4), THURSDAY(5), FRIDAY(6), SATURDAY(7), SUNDAY(8);
         private int value;
-        private Weekday4(int value) {
+        private Weekday4(int value)
+        {
             this.value = value;
         }
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args)
+    {
         // Xuất ra màn hình các thứ trong tuần
         System.out.println("Thu 2 -> " + Weekday.MONDAY);
         System.out.println("Thu 3 -> " + Weekday.TUESDAY);

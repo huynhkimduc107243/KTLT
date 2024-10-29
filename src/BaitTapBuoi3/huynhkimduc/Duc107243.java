@@ -2,13 +2,16 @@ package BaitTapBuoi3.huynhkimduc;
 
 import java.util.Scanner;
 
-public class Duc107243 {
-    public static String gioiTinh(boolean gioiTinh) {
+public class Duc107243
+{
+    public static String gioiTinh(boolean gioiTinh)
+    {
         return gioiTinh ? "Nam" : "Nu";
     }
 
     //
-    public static void Ex1(String[] args) {
+    public static void Ex1(String[] args)
+    {
         int maSinhVien = 107243, tuoi = 18;
         String hoVaTen = "Huynh Kim Duc", ngaySinh = "27/07/2006", lop = "IT24A", diaChi = "Da Nang", khoa = "CNTT";
         boolean gioiTinh = true; // true: Nam, false: Nu
@@ -25,7 +28,8 @@ public class Duc107243 {
         System.out.println("-------------KET-------------");
     }
 
-    public static void Ex2(String[] args) {
+    public static void Ex2(String[] args)
+    {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Nhap ma sinh vien: ");
         int maSinhVien = scanner.nextInt();
@@ -60,9 +64,11 @@ public class Duc107243 {
                 "\nMa sinh vien: %d\nHo va ten: %s\nNgay sinh: %s\nTuoi: %d\nGioi tinh: %s\nLop: %s \nKhoa: %s\nDia chi: %s\n",
                 maSinhVien, hoVaTen, ngaySinh, tuoi, gioiTinh(gioiTinh), lop, khoa, diaChi);
         System.out.println("-------------KET-------------");
+        scanner.close();
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args)
+    {
         Ex1(args);
         Ex2(args);
     }
