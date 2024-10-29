@@ -3,7 +3,8 @@ package Buoi6;
 import java.util.Scanner;
 
 public class Buoi4 {
-    public static void bai4_1() {
+    public static void bai4_1()
+    {
         int arr[] = { 3, 5, 8, 10, 14, 25 };
         System.out.print("\nBai 4.1/ Danh sach phan tu cua mang la:");
         // khi i < độ dài của mảng thì in ra phần tử tương ứng sau đó tăng i thêm 1 đến khi i > độ dài của mảng
@@ -12,7 +13,8 @@ public class Buoi4 {
         }
     }
 
-    public static void bai4_2() {
+    public static void bai4_2()
+    {
         String nguHanh[] = { "Kim", "Moc", "Thuy", "Hoa", "Tho" };
         System.out.print("\n\nBai 4.2/ Danh sach cac ngu hanh la:");
         // khi i < độ dài của mảng thì in ra phần tử tương ứng sau đó tăng i thêm 1 đến khi i > độ dài của mảng
@@ -21,7 +23,8 @@ public class Buoi4 {
         }
     }
 
-    public static void bai4_3() {
+    public static void bai4_3()
+    {
         int arr1[][] = new int[2][3];
         int count = 1; // đếm số thứ tự phần tử
         System.out.print("\n\nBai 4.3/ Danh sach cac phan tu cua mang arr1 la:");
@@ -34,7 +37,8 @@ public class Buoi4 {
         }
     }
 
-    public static void bai4_4() {
+    public static void bai4_4()
+    {
         int arr2[][] = { { 1, 2, 3 }, { 4, 5, 6 }, { 7 } };
         int count = 1; // đếm số thứ tự phần tử
         System.out.print("\n\nBai 4.4/ Danh sach cac phan tu cua mang arr2 la:");
@@ -47,7 +51,8 @@ public class Buoi4 {
         }
     }
 
-    public static void bai4_2NC(int n) {
+    public static void bai4_2NC(int n)
+    {
         System.out.printf("\n\nBai 4.2NC/ Danh sach cac phan tu tu 1 den %d: ", n);
         // khi i <= n thì in ra phần tử tương ứng sau đó tăng i thêm 1 đến khi i > n
         for (int i = 1; i <= n; i++) {
@@ -55,7 +60,8 @@ public class Buoi4 {
         }
     }
 
-    public static void bai4_3NC(int n) {
+    public static void bai4_3NC(int n)
+    {
         System.out.printf("\n\nBai 4.3NC/ Danh sach cac so le nho hon hoac bang %d la: ", n);
         // khi i <= n thì kiểm tra i có phải số lẻ không, nếu có thì in ra sau đó i tăng thêm 1 đến khi i > n
         for (int i = 1; i <= n; i++) {
@@ -65,7 +71,8 @@ public class Buoi4 {
         }
     }
 
-    public static void bai4_4NC(int n) {
+    public static void bai4_4NC(int n)
+    {
         System.out.printf("\n\nBai 4.4NC/ Danh sach cac so chan nho hon hoac bang %d la: ", n);
         // khi i <= n thì kiểm tra i có phải số chẵn không, nếu có thì in ra sau đó i tăng thêm 1 đến khi i > n
         for (int i = 1; i <= n; i++) {
@@ -75,7 +82,8 @@ public class Buoi4 {
         }
     }
 
-    public static void bai4_5NC(int n) {
+    public static void bai4_5NC(int n)
+    {
         System.out.printf("\n\nBai 4.5NC/ Danh sach cac so le nho hon %d la: ", n);
         // khi i <= n thì kiểm tra i có phải số lẻ không, nếu có thì in ra sau đó i tăng thêm 1 đến khi i = n
         for (int i = 1; i < n; i++) {
@@ -85,7 +93,8 @@ public class Buoi4 {
         }
     }
 
-    public static void bai4_6NC(int n) {
+    public static void bai4_6NC(int n)
+    {
         System.out.printf("\n\nBai 4.6NC/ Danh sach cac so chan nho hon %d la: ", n);
         // khi i <= n thì kiểm tra i có phải số chẵn không, nếu có thì in ra sau đó i tăng thêm 1 đến khi i = n
         for (int i = 1; i < n; i++) {
@@ -95,7 +104,8 @@ public class Buoi4 {
         }
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args)
+    {
         Scanner sc = new Scanner(System.in);
         int n;
         System.out.print("Nhap so n: ");
