@@ -4,32 +4,32 @@ import java.util.Scanner;
 
 public class Buoi7
 {
-    public static float nhapDiem()
+    public static int nhapTuoi()
     {
         Scanner sc = new Scanner(System.in);
-        float diem = 0;
+        int tuoi = 0;
 
         while (true)
         {
             try
             {
-                System.out.print("Nhap diem: ");
-                diem = sc.nextFloat();
-                if (diem >= 0 && diem <= 10) break;
+                System.out.print("Nhap tuoi: ");
+                tuoi = sc.nextInt();
+                if (tuoi >= 0 && tuoi <= 150) break;
                 else
                 {
-                    System.out.println("So diem khong hop le, diem nam trong khoang 0-10, hay nhap lai!");
+                    System.out.println("So tuoi khong hop le, tuoi nguoi nam trong khoang 0-150. Vui long nhap lai!");
                 }
             }
             catch (Exception ex)
             {
-                System.out.println("So diem khong hop le, diem nam trong khoang 0-10, hay nhap lai!");
+                System.out.println("So diem khong hop le, tuoi nguoi nam trong khoang 0-150. Vui long nhap lai!");
             }
         }
-        return diem;
+        return tuoi;
     }
     public static void main(String[] args)
     {
-        System.out.println("Diem vua nhap la: " + nhapDiem());
+        System.out.println("So tuoi vua nhap la: " + nhapTuoi());
     }
 }
