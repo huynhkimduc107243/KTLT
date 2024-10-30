@@ -1,4 +1,4 @@
-package Buoi6;
+package Buoi5;
 
 import java.util.Scanner;
 
