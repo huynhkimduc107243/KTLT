@@ -2,7 +2,8 @@ package Buoi6;
 
 import java.util.Scanner;
 
-public class Buoi4 {
+public class Buoi4
+{
     public static void bai4_1()
     {
         int arr[] = { 3, 5, 8, 10, 14, 25 };
