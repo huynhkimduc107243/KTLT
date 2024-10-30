@@ -55,6 +55,7 @@ public class Buoi7
     }
     public static void main(String[] args)
     {
+        System.out.println("So diem vua nhap la: " + nhapDiem());
         System.out.println("So tuoi vua nhap la: " + nhapTuoi());
     }
 }
