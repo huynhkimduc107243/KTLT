@@ -89,7 +89,6 @@ public class Buoi4
         {
             if (i % 2 == 0)
                 System.out.print("\t" + i);
-            }
         }
     }
 
