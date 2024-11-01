@@ -1,4 +1,4 @@
-package Buoi1;
+package Practice;
 
 import java.util.Scanner;
 
