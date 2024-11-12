@@ -2,8 +2,7 @@ package Chuong4;
 
 public class Demo1 {
   // Toán tử (ví dụ 1-7)
-  public static void viDu1()]
-  {
+  public static void viDu1() {
     int a = 3;
 
     System.out.println("Ex 1:");
