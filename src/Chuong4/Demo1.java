@@ -1,8 +1,10 @@
 package Chuong4;
 
-public class Demo1 {
+public class Demo1
+{
   // Toán tử (ví dụ 1-7)
-  public static void viDu1() {
+  public static void viDu1()
+  {
     int a = 3;
 
     System.out.println("Ex 1:");
@@ -13,7 +15,8 @@ public class Demo1 {
     System.out.println(++a + 1); // 7 + 1 = 8
   }
 
-  public static void viDu2() {
+  public static void viDu2()
+  {
     int a = 0, b, c;
     a++;
     b = a;
@@ -25,7 +28,8 @@ public class Demo1 {
     System.out.println(c); // gán c = a rồi +1
   }
 
-  public static void viDu3() {
+  public static void viDu3()
+  {
     int a = 0, b, c;
     ++a;
     b = a;
@@ -37,7 +41,8 @@ public class Demo1 {
     System.out.println(c); // gán c = a + 1
   }
 
-  public static void viDu4() {
+  public static void viDu4()
+  {
     int a = 0, b, c;
     ++a;
     b = ++a;
@@ -50,7 +55,8 @@ public class Demo1 {
   }
 
   // Thu hẹp (Narrowing) double -> float -> long -> int -> short -> byte
-  public static void chiDinhEpKieu(String[] args) {
+  public static void chiDinhEpKieu(String[] args)
+  {
     double dou = 120;
     long lo = (long) dou; // yêu cẩu chỉ định ép kiểu long
     int in = (int) lo; // yêu cầu chỉ định ép kiểu int
@@ -59,7 +65,8 @@ public class Demo1 {
   }
 
   // Nới rộng (Widening) byte -> short -> int -> long -> float -> double
-  public static void khongChiDinhEpKieu(String[] args) {
+  public static void khongChiDinhEpKieu(String[] args)
+  {
     int in = 120;
     long ll = in; // không yêu cầu chỉ định ép kiểu
     float fl = ll; // không yêu cầu chỉ định ép kiểu
@@ -70,7 +77,8 @@ public class Demo1 {
   }
 
   // Chuyển từ String sang Int, Long, Double, Float, Short
-  public static void chuyenDoiKieu1(String[] args) {
+  public static void chuyenDoiKieu1(String[] args)
+  {
     String str = "200";
     // Sử dụng Integer.parseInt(), Long.parseLong(), Double.parseDouble(),
     // Float.parseFloat(), Short.parseShort()
@@ -82,7 +90,8 @@ public class Demo1 {
   }
 
   // Chuyển từ Int, Long, Double, Float, Short sang String
-  public static void chuyenDoiKieu2(String[] args) {
+  public static void chuyenDoiKieu2(String[] args)
+  {
     int in = 200;
     long ll = 9991991991L;
     short sh = 999;
@@ -98,7 +107,8 @@ public class Demo1 {
     System.out.println("Gia tri sau khi chuyen Short co gia tri 200 thanh String: " + String.valueOf(db));
   }
 
-  public static void main(String[] args) {
+  public static void main(String[] args)
+  {
     viDu1();
     viDu2();
     viDu3();
