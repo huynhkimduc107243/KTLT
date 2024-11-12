@@ -2,7 +2,8 @@ package Chuong4;
 
 public class Demo1 {
   // Toán tử (ví dụ 1-7)
-  public static void viDu1() {
+  public static void viDu1()]
+  {
     int a = 3;
 
     System.out.println("Ex 1:");
@@ -98,8 +99,7 @@ public class Demo1 {
     System.out.println("Gia tri sau khi chuyen Short co gia tri 200 thanh String: " + String.valueOf(db));
   }
 
-  public static void main(String[] args)
-{
+  public static void main(String[] args) {
     viDu1();
     viDu2();
     viDu3();
