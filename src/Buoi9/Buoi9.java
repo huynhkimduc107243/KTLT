@@ -11,7 +11,7 @@ public class Buoi9
         2   ***
     Số dấu sao trên mỗi hàng(i) = i + 1
      */
-    public static void tamGiacVuongBenDuoi(int chieuCao)
+    public static void tamGiacSao(int chieuCao)
     {
         // Duyệt qua từng hàng
         for (int hang = 0; hang < chieuCao; hang++)
@@ -31,7 +31,7 @@ public class Buoi9
     }
 
     // Lật ngược tam giác bài 1, được bài 2...
-    public static void tamGiacVuongBenTren(int chieuCao)
+    public static void tamGiacSaoNguoc(int chieuCao)
     {
         /*
         Duyệt qua từng hàng, bắt đầu từ hàng cuối cùng (chieuCao - 1) và giảm dần
@@ -58,7 +58,7 @@ public class Buoi9
     Số lượng số trong mỗi hàng(i) = i + 1
     Cơ bản là giống bài 1, thêm biến num kiểu nguyên, num = cot + 1 để cột đầu tiên là số 1 thay vì 0, mỗi cột đại diện cho 1 số
     */
-    public static void tamGiacVuongSoBenDuoi(int chieuCao)
+    public static void tamGiacSo(int chieuCao)
     {
         for (int hang = 0; hang < chieuCao; hang++)
         {
@@ -73,7 +73,7 @@ public class Buoi9
     }
 
     // Cơ bản là giống bài 2, thêm biến num kiểu nguyên, num = cot + 1 để cột đầu tiên là số 1 thay vì 0, mỗi cột đại diện cho 1 số 
-    public static void tamGiacVuongSoBenTren(int chieuCao)
+    public static void tamGiacSoNguoc(int chieuCao)
     {
         for (int hang = chieuCao - 1; hang >= 0; hang--)
         {
@@ -91,9 +91,9 @@ public class Buoi9
         Scanner sc = new Scanner(System.in);
         System.out.print("Chieu cao cua tam giac vuong: ");
         int chieuCao = sc.nextInt();
-        tamGiacVuongBenDuoi(chieuCao);
-        tamGiacVuongBenTren(chieuCao);
-        tamGiacVuongSoBenDuoi(chieuCao);
-        tamGiacVuongSoBenTren(chieuCao);
+        tamGiacSao(chieuCao);
+        tamGiacSaoNguoc(chieuCao);
+        tamGiacSo(chieuCao);
+        tamGiacSoNguoc(chieuCao);
     }
 }
