@@ -1,8 +1,8 @@
-package Chuong6;
+package Buoi9;
 
 import java.util.Scanner;
 
-public class BaiTap
+public class Buoi9
 {
     /* Vẽ tam giác vuông với kí tự *
         Ví dụ: tam giác chiều cao 3
@@ -23,7 +23,7 @@ public class BaiTap
             */
             for (int cot = 0; cot < hang + 1; cot++)
             {
-                System.out.print("*");
+                System.out.print("* ");
             }
             System.out.print("\n"); 
         }
@@ -43,7 +43,7 @@ public class BaiTap
             // Ở hàng thứ row, số dấu sao là height - row
             for (int cot = 0; cot < hang + 1; cot++)
             {
-                System.out.print("*");
+                System.out.print("* ");
             }
             System.out.print("\n"); 
         }
