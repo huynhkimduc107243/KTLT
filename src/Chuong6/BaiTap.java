@@ -27,6 +27,7 @@ public class BaiTap
             }
             System.out.print("\n"); 
         }
+        System.out.println();
     }
 
     // Lật ngược tam giác bài 1, được bài 2...
@@ -46,15 +47,53 @@ public class BaiTap
             }
             System.out.print("\n"); 
         }
+        System.out.println();
     }
 
+    /*
+    Ví dụ: 1 tam giác vuông chieuCao = 3
+    i = 0   1
+        1   1 2
+        2   1 2 3
+    Số lượng số trong mỗi hàng(i) = i + 1
+    Cơ bản là giống bài 1, thêm biến num kiểu nguyên, num = cot + 1 để cột đầu tiên là số 1 thay vì 0, mỗi cột đại diện cho 1 số
+    */
+    public static void tamGiacVuongSoBenDuoi(int chieuCao)
+    {
+        for (int hang = 0; hang < chieuCao; hang++)
+        {
+            for (int cot = 0; cot < hang + 1; cot++)
+            {
+                int num = cot + 1;
+                System.out.print(num + " ");
+            }
+            System.out.print("\n"); 
+        }
+        System.out.println();
+    }
+
+    // Cơ bản là giống bài 2, thêm biến num kiểu nguyên, num = cot + 1 để cột đầu tiên là số 1 thay vì 0, mỗi cột đại diện cho 1 số 
+    public static void tamGiacVuongSoBenTren(int chieuCao)
+    {
+        for (int hang = chieuCao - 1; hang >= 0; hang--)
+        {
+            for (int cot = 0; cot < hang + 1; cot++)
+            {
+                int num = cot + 1;
+                System.out.print(num + " ");
+            }
+            System.out.print("\n"); 
+        }
+        System.out.println();
+    }
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.print("Chieu cao cua tam giac vuong: ");
         int chieuCao = sc.nextInt();
         tamGiacVuongBenDuoi(chieuCao);
-        System.out.println();
         tamGiacVuongBenTren(chieuCao);
+        tamGiacVuongSoBenDuoi(chieuCao);
+        tamGiacVuongSoBenTren(chieuCao);
     }
 }
