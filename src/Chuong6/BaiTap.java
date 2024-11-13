@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class BaiTap
 {
     /* Vẽ tam giác vuông với kí tự *
-    Ví dụ: tam giác chiều cao 3
+        Ví dụ: tam giác chiều cao 3
     i = 0   *
         1   **
         2   ***
