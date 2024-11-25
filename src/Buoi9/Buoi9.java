@@ -72,7 +72,8 @@ public class Buoi9
         System.out.println();
     }
 
-    // Cơ bản là giống bài 2, thêm biến num kiểu nguyên, num = cot + 1 để cột đầu tiên là số 1 thay vì 0, mỗi cột đại diện cho 1 số 
+    // Cơ bản là giống bài 2, thêm biến num kiểu nguyên, num = cot + 1 để cột đầu tiên là số 1 thay vì 0, mỗi cột
+    // đại diện cho 1 số
     public static void tamGiacSoNguoc(int chieuCao)
     {
         for (int hang = chieuCao - 1; hang >= 0; hang--)
