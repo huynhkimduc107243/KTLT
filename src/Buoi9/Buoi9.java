@@ -92,6 +92,7 @@ public class Buoi9
         Scanner sc = new Scanner(System.in);
         System.out.print("Chieu cao cua tam giac vuong: ");
         int chieuCao = sc.nextInt();
+        sc.close();
         tamGiacSao(chieuCao);
         tamGiacSaoNguoc(chieuCao);
         tamGiacSo(chieuCao);
