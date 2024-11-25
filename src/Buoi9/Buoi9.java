@@ -18,8 +18,8 @@ public class Buoi9
         {
             /*
             Số lần in dấu sao cho mỗi hàng là hang + 1 vì hàng 0 cần 1 dấu sao, hàng 1 cần 2 dấu sao, v.v.
-             Cụ thể: Hàng đầu tiên: hang = 0, chỉ có 1 cột cot = 0 được in dấu sao.
-                     Hàng thứ 2: hang = 1, sẽ có 2 cột cot = 0 và 1 được in dấu sao, v.v.
+             Cụ thể: Hàng đầu tiên: hang = 0, chỉ có 1 cột: cot = 0 được in dấu sao.
+                     Hàng thứ 2: hang = 1, sẽ có 2 cột: cot = 0 và 1 được in dấu sao, v.v.
             */
             for (int cot = 0; cot < hang + 1; cot++)
             {
