@@ -4,17 +4,50 @@ import java.util.Scanner;
 
 public class Buoi7
 {
-    public static int nhapDiem()
+    public static void hienThiGiaTri(int n)
+    {
+        System.out.print("Danh sach cac phan tu la: ");
+        int i = 1;
+        while (i <= n)
+        {
+            System.out.print(i + " ");
+            i++;
+        }
+        System.out.println();
+    }
+
+    public static int nhapSoNguyen()
+    {
+        int n = 0;
+        Scanner sc = new Scanner(System.in);
+        while(true)
+        {
+            try
+            {
+                System.out.print("Nhap gia tri: ");
+                n = Integer.parseInt(sc.nextLine());
+                break;
+
+            }
+            catch (Exception ex)
+            {
+                System.out.println("Du lieu khong hop le, hay nhap lai!!!");
+            }
+        }
+        return n;
+    }
+
+    public static float nhapDiem()
     {
         Scanner sc = new Scanner(System.in);
-        int diem = 0;
+        float diem = 0;
 
         while (true)
         {
             try
             {
-                System.out.print("Nhap tuoi: ");
-                diem = sc.nextInt();
+                System.out.print("Nhap diem: ");
+                diem = sc.nextFloat();
                 if (diem >= 0 && diem <= 10) break;
                 else
                 {
@@ -29,17 +62,17 @@ public class Buoi7
         return diem;
     }
 
-    public static int nhapTuoi()
+    public static float nhapTuoi()
     {
         Scanner sc = new Scanner(System.in);
-        int tuoi = 0;
+        float tuoi = 0;
 
         while (true)
         {
             try
             {
                 System.out.print("Nhap tuoi: ");
-                tuoi = sc.nextInt();
+                tuoi = sc.nextFloat();
                 if (tuoi >= 0 && tuoi <= 150) break;
                 else
                 {
@@ -55,6 +88,7 @@ public class Buoi7
     }
     public static void main(String[] args)
     {
+        hienThiGiaTri(nhapSoNguyen());
         System.out.println("So diem vua nhap la: " + nhapDiem());
         System.out.println("So tuoi vua nhap la: " + nhapTuoi());
     }
