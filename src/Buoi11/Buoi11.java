@@ -1,4 +1,4 @@
-package Practice;
+package Buoi11;
 
 import java.util.Scanner;
 
@@ -159,6 +159,6 @@ public class Buoi11
         int num3 = sc.nextInt();
 
         // Bài 5:
-        sapXepMang(h);
+        // sapXepMang(h);
     }
 }
