@@ -2,7 +2,7 @@ package Buoi11_12;
 
 import java.util.Scanner;
 
-public class Buoi11
+public class Buoi11_12
 {
     private static final Scanner sc = new Scanner(System.in);
 
@@ -43,12 +43,16 @@ public class Buoi11
     }
 
     // Bài 3: Tổng các số chẵn từ 2 đến N
-    public static void tongCacSoChan() {
+    public static void tongCacSoChan()
+    {
         System.out.print("\nNhap so N: ");
         int N = 0;
-        try {
+        try
+        {
             N = sc.nextInt();
-        } catch (Exception e) {
+        }
+        catch (Exception e)
+        {
             System.out.println("Vui long nhap mot so nguyen.");
             sc.next(); // clear the invalid input
             return;
@@ -63,7 +67,8 @@ public class Buoi11
         System.out.printf("Tong cac so chan tu 2 den %d la: %d ", N, tong);
     }
 
-    public static void kiemTraKhongDeQuy(int num1) {
+    public static void kiemTraKhongDeQuy(int num1)
+    {
         if (num1 < 2)
         {
             System.out.printf("%d khong phai la so nguyen to", num1);
@@ -81,42 +86,51 @@ public class Buoi11
         System.out.printf("%d la so nguyen to", num1);
     }
 
-    public static long giaiThuaKhongDeQuy(int num2) {
+    public static long giaiThuaKhongDeQuy(int num2)
+    {
         long giaiThua = 1;
         // Khi num2 > 1 thì tiếp tục nhân giaiThua với i và giảm num2 đi 1, ngược lại
         // trả về giaiThua
-        for (int i = 1; i <= num2; i++) {
+        for (int i = 1; i <= num2; i++)
+        {
             giaiThua *= i;
         }
         return giaiThua;
     }
 
-    public static long tongCacGiaiThua(int d, int e, int f, int g) {
+    public static long tongCacGiaiThua(int d, int e, int f, int g)
+    {
         long tong = 0;
         tong = giaiThuaKhongDeQuy(d) + giaiThuaKhongDeQuy(e) + giaiThuaKhongDeQuy(f) + giaiThuaKhongDeQuy(g);
         return tong;
     }
 
-    public static void phanTichThuaSoNguyenTo(int num3) {
+    public static void phanTichThuaSoNguyenTo(int num3)
+    {
         System.out.printf("%d phan tich thanh thua so nguyen to la: ", num3);
         int i = 2;
         // Khi num3 > 1 thì tiếp tục phân tích, nếu num3 chia hết cho i thì in ra i và
         // num3 = num3 / i, ngược lại tăng i lên 1 để kiểm tra tiếp
-        while (num3 > 1) {
-            if (num3 % i == 0) {
+        while (num3 > 1)
+        {
+            if (num3 % i == 0)
+            {
                 System.out.print(" " + i);
                 num3 = num3 / i;
-            } else
-                i++;
+            } else i++;
         }
     }
 
-    public static void sapXepMang(int h[]) {
+    public static void sapXepMang(int h[])
+    {
         System.out.println("Mang sau khi sap xep tang dan: ");
         // Sắp xếp mảng bằng thuật toán Bubble Sort
-        for (int i = 0; i < h.length - 1; i++) {
-            for (int j = 0; j < h.length - i - 1; j++) {
-                if (h[j] > h[j + 1]) {
+        for (int i = 0; i < h.length - 1; i++)
+        {
+            for (int j = 0; j < h.length - i - 1; j++)
+            {
+                if (h[j] > h[j + 1])
+                {
                     int temp = h[j];
                     h[j] = h[j + 1];
                     h[j + 1] = temp;
@@ -126,8 +140,10 @@ public class Buoi11
         xuatMang(h);
     }
 
-    public static void xuatMang(int h[]) {
-        for (int i = 0; i < h.length; i++) {
+    public static void xuatMang(int h[])
+    {
+        for (int i = 0; i < h.length; i++)
+        {
             System.out.println(" " + h[i]);
         }
     }
@@ -188,7 +204,8 @@ public class Buoi11
         System.out.printf("So nho nhat trong 3 so %d, %d, %d la: %d", a, b, c, min);
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args)
+    {
         kiemTraTamGiac();
         tongCacSoChan();
         soLonNhat();
