@@ -13,7 +13,7 @@ public class Buoi11
         double b = sc.nextDouble();
         double c = sc.nextDouble();
 
-        if (a + b > c || a + c > b || b + c > a)
+        if (a + b > c && a + c > b && b + c > a) // Điều kiện tạo thành 1 tam giác
         {
             if (a == b && b == c)
             {
@@ -42,18 +42,14 @@ public class Buoi11
         int N = sc.nextInt();
         int tong = 0;
 
-        for (int i = 2; i <= N; i+= 2) // chẵn + chẵn = chẵn, i + 2 = 
+        // Tính tổng các số chẵn từ 2 đến N
+        for (int i = 2; i <= N; i += 2) 
         {
             tong += i;
         }
         System.out.printf("Tong cac so chan tu 2 den %d la: %d ", N, tong);
     }
 
-    /* Kiểm tra số nguyên tố:
-    - Cách 1: Kiểm tra trực tiếp:
-        Số tự nhiên n >= 2 là số nguyên tố khi và chỉ khi n k chia hết cho 2, 3, 4, ..., n - 1
-    - Cách 2:
-    */
     public static void kiemTraKhongDeQuy(int num1)
     {
         if (num1 < 2)
@@ -61,6 +57,7 @@ public class Buoi11
             System.out.printf("%d khong phai la so nguyen to", num1);
             return;
         }
+        // Chạy từ 2 đến căn bậc 2 của num1, nếu num1 chia hết cho i thì num1 không phải là số nguyên tố, ngược lại là số nguyên tố
         for (int i = 2; i <= Math.sqrt(num1); ++i)
         {
             if (num1 % i == 0)
@@ -72,13 +69,10 @@ public class Buoi11
         System.out.printf("%d la so nguyen to", num1);
     }
 
-    /*
-    Tính giai thừa:
-        Ví dụ: 5! = 1 * 2 * 3 * 4 * 5 = 120
-    */ 
     public static long giaiThuaKhongDeQuy(int num2)
     {
         long giaiThua = 1;
+        // Khi num2 > 1 thì tiếp tục nhân giaiThua với i và giảm num2 đi 1, ngược lại trả về giaiThua
         for (int i = 1; i <= num2; i++)
         {
             giaiThua *= i;
@@ -86,7 +80,6 @@ public class Buoi11
         return giaiThua;
     }
     
-    // Bài 6
     public static long tongCacGiaiThua(int d, int e, int f, int g)
     {
         long tong = 0;
@@ -98,6 +91,7 @@ public class Buoi11
     {
         System.out.printf("%d phan tich thanh thua so nguyen to la: ", num3);
         int i = 2;
+        // Khi num3 > 1 thì tiếp tục phân tích, nếu num3 chia hết cho i thì in ra i và num3 = num3 / i, ngược lại tăng i lên 1 để kiểm tra tiếp
         while (num3 > 1)
         {
             if (num3 % i == 0)
@@ -109,15 +103,14 @@ public class Buoi11
         }
     }
 
-    // Bubble sort bài 5
     public static void sapXepMang(int h[])
     {
         System.out.println("Mang sau khi sap xep tang dan: ");
+        // Sắp xếp mảng bằng thuật toán Bubble Sort
         for (int i = 0; i < h.length - 1; i++)
         {
             for (int j = 0; j < h.length - i - 1; j++)
             {
-                // tăng
                 if (h[j] > h[j + 1])
                 {
                     int temp = h[j];
@@ -141,12 +134,10 @@ public class Buoi11
         bai2();
         bai3();
 
-        // Bài 4
         System.out.print("\n\nNhap so muon kiem tra: ");
         int num1 = sc.nextInt();
         kiemTraKhongDeQuy(num1);
 
-        // Bài 6
         System.out.print("\n\nNhap cac so muon tinh tong giai thua: ");
         int d = sc.nextInt();
         int e = sc.nextInt();
@@ -154,9 +145,9 @@ public class Buoi11
         int g = sc.nextInt();
         System.out.printf("Tong giai thua cua cac so %d, %d, %d, %d la: %d", d, e, f, g, tongCacGiaiThua(d, e, f, g));
 
-        // Bài 18:
         System.out.print("\nSo muon phan tich: ");
         int num3 = sc.nextInt();
+        phanTichThuaSoNguyenTo(num3);
 
         // Bài 5:
         // sapXepMang(h);
