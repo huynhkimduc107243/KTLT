@@ -58,15 +58,14 @@ public class Buoi11_12
             return;
         }
         int tong = 0;
-
-        // Tính tổng các số chẵn từ 2 đến N
-        for (int i = 2; i <= N; i += 2) // i += 2 = i + 2 = i
+        for (int i = 2; i <= N; i += 2)
         {
             tong += i;
         }
         System.out.printf("Tong cac so chan tu 2 den %d la: %d ", N, tong);
     }
 
+    // Bài 4: Kiểm tra số nguyên tố (không đệ quy)
     public static void kiemTraKhongDeQuy(int num1)
     {
         if (num1 < 2)
@@ -86,6 +85,27 @@ public class Buoi11_12
         System.out.printf("%d la so nguyen to", num1);
     }
 
+    // Bài 5: Sắp xếp mảng theo chiều tăng
+    public static void mangTangDan(int h[])
+    {
+        System.out.println("Mang sau khi sap xep tang dan: ");
+        // Sắp xếp mảng bằng thuật toán Bubble Sort
+        for (int i = 0; i < h.length - 1; i++)
+        {
+            for (int j = 0; j < h.length - i - 1; j++)
+            {
+                if (h[j] > h[j + 1])
+                {
+                    int temp = h[j];
+                    h[j] = h[j + 1];
+                    h[j + 1] = temp;
+                }
+            }
+        }
+        xuatMang(h);
+    }
+
+    // Bài 6: Tổng các giai thừa (không đệ quy)
     public static long giaiThuaKhongDeQuy(int num2)
     {
         long giaiThua = 1;
@@ -105,31 +125,16 @@ public class Buoi11_12
         return tong;
     }
 
-    public static void phanTichThuaSoNguyenTo(int num3)
+    // Bài 10: Sắp xếp theo chiều giảm
+    public static void mangGiamDan(int h[])
     {
-        System.out.printf("%d phan tich thanh thua so nguyen to la: ", num3);
-        int i = 2;
-        // Khi num3 > 1 thì tiếp tục phân tích, nếu num3 chia hết cho i thì in ra i và
-        // num3 = num3 / i, ngược lại tăng i lên 1 để kiểm tra tiếp
-        while (num3 > 1)
-        {
-            if (num3 % i == 0)
-            {
-                System.out.print(" " + i);
-                num3 = num3 / i;
-            } else i++;
-        }
-    }
-
-    public static void sapXepMang(int h[])
-    {
-        System.out.println("Mang sau khi sap xep tang dan: ");
+        System.out.println("Mang sau khi sap xep giam dan: ");
         // Sắp xếp mảng bằng thuật toán Bubble Sort
         for (int i = 0; i < h.length - 1; i++)
         {
             for (int j = 0; j < h.length - i - 1; j++)
             {
-                if (h[j] > h[j + 1])
+                if (h[j] < h[j + 1])
                 {
                     int temp = h[j];
                     h[j] = h[j + 1];
@@ -138,14 +143,6 @@ public class Buoi11_12
             }
         }
         xuatMang(h);
-    }
-
-    public static void xuatMang(int h[])
-    {
-        for (int i = 0; i < h.length; i++)
-        {
-            System.out.println(" " + h[i]);
-        }
     }
     
     // Bài 14: Số lớn nhất trong 3 số được nhập vào bằng try-catch và dùng while để nhập đến khi đúng
@@ -204,16 +201,64 @@ public class Buoi11_12
         System.out.printf("So nho nhat trong 3 so %d, %d, %d la: %d", a, b, c, min);
     }
 
+    // Bài 17: Nhập vào 1 chuỗi và đảo ngược chuỗi đó
+    public static void daoNguocChuoi()
+    {
+        System.out.print("Nhap chuoi: ");
+        String str = sc.nextLine();
+        String reverse = "";
+        for (int i = str.length() - 1; i >= 0; i--)
+        {
+            reverse += str.charAt(i);
+        }
+        System.out.println("Chuoi sau khi dao nguoc la: " + reverse);
+    }
+
+    // Bài 18: Phân tích số thành thừa số nguyên tố
+    public static void phanTichThuaSoNguyenTo(int num3)
+    {
+        System.out.printf("%d phan tich thanh thua so nguyen to la: ", num3);
+        int i = 2;
+        // Khi num3 > 1 thì tiếp tục phân tích, nếu num3 chia hết cho i thì in ra i và
+        // num3 = num3 / i, ngược lại tăng i lên 1 để kiểm tra tiếp
+        while (num3 > 1)
+        {
+            if (num3 % i == 0)
+            {
+                System.out.print(" " + i);
+                num3 = num3 / i;
+            } else i++;
+        }
+    }
+    
+    // Hàm xuất mảng cho bài 5 và bài 10
+    public static void xuatMang(int h[])
+    {
+        for (int i = 0; i < h.length; i++)
+        {
+            System.out.println(" " + h[i]);
+        }
+    }
+
     public static void main(String[] args)
     {
-        kiemTraTamGiac();
-        tongCacSoChan();
-        soLonNhat();
-        soNhoNhat();
+        int[] h = {5, 3, 8, 6, 2}; // Mảng cho bài 5 và 10
 
+        kiemTraTamGiac(); // Bài 2
+        tongCacSoChan(); // Bài 3
+        
+        // Bài 4
         System.out.print("\n\nNhap so muon kiem tra: ");
         int num1 = sc.nextInt();
         kiemTraKhongDeQuy(num1);
+
+        mangTangDan(h); // Bài 5
+        mangGiamDan(h); // Bài 10
+        soLonNhat(); // Bài 14
+        soNhoNhat(); // Bài 14.1
+        daoNguocChuoi(); // Bài 17
+
+        
 
         System.out.print("\n\nNhap cac so muon tinh tong giai thua: ");
         int d = sc.nextInt();
