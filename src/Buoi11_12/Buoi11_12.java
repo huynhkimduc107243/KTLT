@@ -12,32 +12,45 @@ public class Buoi11_12
         double a = 0, b = 0, c = 0;
         while (true)
         {
-            System.out.print("Nhap 3 canh cua tam giac: ");
-            a = sc.nextDouble();
-            b = sc.nextDouble();
-            c = sc.nextDouble();
-
-            if (a + b > c && a + c > b && b + c > a) // Điều kiện tạo thành 1 tam giác
+            try
             {
-                if (a == b && b == c)
+                System.out.print("Nhap 3 canh cua tam giac: ");
+                a = sc.nextDouble();
+                b = sc.nextDouble();
+                c = sc.nextDouble();
+
+                if (a + b > c && a + c > b && b + c > a) // Điều kiện tạo thành 1 tam giác
                 {
-                    System.out.println("Tam giac deu");
-                }
-                else if (a == b || b == c || a == c)
-                {
-                    if (a * a == b * b + c * c || b * b == a * a + c * c || c * c == a * a + b * b)
+                    if (a == b && b == c)
                     {
-                        System.out.println("Tam giac vuong can");
+                        System.out.println("Tam giac deu");
                     }
-                    else System.out.println("Tam giac can");
+                    else if (a == b || b == c || a == c)
+                    {
+                        if (a * a == b * b + c * c || b * b == a * a + c * c || c * c == a * a + b * b)
+                        {
+                            System.out.println("Tam giac vuong can");
+                        }
+                        else System.out.println("Tam giac can");
+                    }
+                    else if (a * a == b * b + c * c || b * b == a * a + c * c || c * c == a * a + b * b)
+                    {
+                        System.out.println("Tam giac vuong");
+                    }
+                    else System.out.println("Tam giac thuong");
+                    break;
                 }
-                else if (a * a == b * b + c * c || b * b == a * a + c * c || c * c == a * a + b * b)
+                else
                 {
-                    System.out.println("Tam giac vuong");
+                    System.out.println("Ba gia tri vua nhap khong tao thanh 3 canh tam giac");
                 }
-                else System.out.println("Tam giac thuong");
             }
-            System.out.println("Ba gia tri vua nhap khong tao thanh 3 canh tam giac");
+            catch (Exception e)
+            {
+                System.out.println("Vui long nhap so thuc.");
+                sc.next();
+                continue;
+            }
         }
         
     }
@@ -82,13 +95,13 @@ public class Buoi11_12
                 return;
             }
         }
-        System.out.printf("%d la so nguyen to", num1);
+        System.out.printf("%d la so nguyen to\n", num1);
     }
 
     // Bài 5: Sắp xếp mảng theo chiều tăng
     public static void mangTangDan(int h[])
     {
-        System.out.println("Mang sau khi sap xep tang dan: ");
+        System.out.println("\nMang sau khi sap xep tang dan: ");
         // Sắp xếp mảng bằng thuật toán Bubble Sort
         for (int i = 0; i < h.length - 1; i++)
         {
@@ -128,7 +141,7 @@ public class Buoi11_12
     // Bài 10: Sắp xếp theo chiều giảm
     public static void mangGiamDan(int h[])
     {
-        System.out.println("Mang sau khi sap xep giam dan: ");
+        System.out.println("\nMang sau khi sap xep giam dan: ");
         // Sắp xếp mảng bằng thuật toán Bubble Sort
         for (int i = 0; i < h.length - 1; i++)
         {
@@ -145,7 +158,7 @@ public class Buoi11_12
         xuatMang(h);
     }
     
-    // Bài 14: Số lớn nhất trong 3 số được nhập vào bằng try-catch và dùng while để nhập đến khi đúng
+    // Bài 14: Số lớn nhất trong 3 số
     public static void soLonNhat()
     {
         int a = 0, b = 0, c = 0;
@@ -153,7 +166,7 @@ public class Buoi11_12
         {
             try
             {
-                System.out.print("Nhap 3 so a, b, c: ");
+                System.out.print("\nNhap 3 so a, b, c: ");
                 a = sc.nextInt();
                 b = sc.nextInt();
                 c = sc.nextInt();
@@ -181,7 +194,7 @@ public class Buoi11_12
         {
             try
             {
-                System.out.print("Nhap 3 so a, b, c: ");
+                System.out.print("\n\nNhap 3 so a, b, c: ");
                 a = sc.nextInt();
                 b = sc.nextInt();
                 c = sc.nextInt();
@@ -204,8 +217,9 @@ public class Buoi11_12
     // Bài 17: Nhập vào 1 chuỗi và đảo ngược chuỗi đó
     public static void daoNguocChuoi()
     {
-        System.out.print("Nhap chuoi: ");
+        System.out.print("\nNhap chuoi: ");
         String str = sc.nextLine();
+        sc.nextLine();
         String reverse = "";
         for (int i = str.length() - 1; i >= 0; i--)
         {
@@ -230,7 +244,51 @@ public class Buoi11_12
             } else i++;
         }
     }
-    
+
+    /* Bài 27: Kiểm tra số hoàn hảo với try-catch và while
+    * Số hoàn hảo là số mà tổng các ước của nó (không kể chính nó) bằng chính nó
+    * Ví dụ: 6 có các ước là 1, 2, 3, 6 => 1 + 2 + 3 = 6
+    */
+    public static void soHoanHao()
+    {
+        int num4 = 0;
+        while (true)
+        {
+            try
+            {
+                System.out.print("\nNhap so can kiem tra: ");
+                num4 = sc.nextInt();
+                break;
+            }
+            catch (Exception e)
+            {
+                System.out.println("Vui long nhap so nguyen.");
+                sc.next();
+            }
+        }
+
+        /*
+         * i chạy từ 1 đến num4 - 1, nếu num4 chia hết cho i thì cộng i vào sum
+         * Khi i = num4, nếu sum = num4 thì num4 là số hoàn hảo 
+         */
+        int sum = 0;
+        for (int i = 1; i < num4/2; i++)
+        {
+            if (num4 % i == 0) sum += i;
+        }
+        if (sum == num4)
+        {
+            System.out.printf("%d la so hoan hao", num4);
+            System.out.print("Cac uoc cua so hoan hao la:");
+            for (int i = 1; i < num4/2; i++)
+            {
+                if (num4 % i == 0) System.out.print(" " + i);
+            }
+            System.out.println();
+        }
+        else System.out.printf("%d khong phai la so hoan hao", num4);
+    }
+
     // Hàm xuất mảng cho bài 5 và bài 10
     public static void xuatMang(int h[])
     {
@@ -253,25 +311,25 @@ public class Buoi11_12
         kiemTraKhongDeQuy(num1);
 
         mangTangDan(h); // Bài 5
-        mangGiamDan(h); // Bài 10
-        soLonNhat(); // Bài 14
-        soNhoNhat(); // Bài 14.1
-        daoNguocChuoi(); // Bài 17
 
-        
-
-        System.out.print("\n\nNhap cac so muon tinh tong giai thua: ");
+        // Bài 6
+        System.out.print("\nNhap cac so muon tinh tong giai thua: ");
         int d = sc.nextInt();
         int e = sc.nextInt();
         int f = sc.nextInt();
         int g = sc.nextInt();
         System.out.printf("Tong giai thua cua cac so %d, %d, %d, %d la: %d", d, e, f, g, tongCacGiaiThua(d, e, f, g));
 
+        mangGiamDan(h); // Bài 10
+        soLonNhat(); // Bài 14
+        soNhoNhat(); // Bài 14.1
+        daoNguocChuoi(); // Bài 17
+
+        // Bài 18
         System.out.print("\nSo muon phan tich: ");
         int num3 = sc.nextInt();
         phanTichThuaSoNguyenTo(num3);
 
-        // Bài 5:
-        // sapXepMang(h);
+        soHoanHao(); // Bài 27
     }
 }
