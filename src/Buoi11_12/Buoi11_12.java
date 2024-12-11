@@ -47,12 +47,11 @@ public class Buoi11_12
             }
             catch (Exception e)
             {
-                System.out.println("Vui long nhap so thuc.");
+                System.out.println("Vui long nhap so thuc");
                 sc.next();
                 continue;
             }
-        }
-        
+        } 
     }
 
     // Bài 3: Tổng các số chẵn từ 2 đến N
@@ -289,27 +288,31 @@ public class Buoi11_12
         else System.out.printf("%d khong phai la so hoan hao", num4);
     }
 
-    // Bài 30: Kiểm tra số đối xứng palindrome
-    public static void soPalindrome()
+    /*
+     * Bài 30: Kiểm tra số đối xứng palindrome
+     * Số đối xứng là số có nghịch đảo vẫn bằng chính nó và k nhỏ hơn 0
+     */
+
+     // Hàm kiểm tra số đối xứng
+    public static boolean isPalindrome(int num5)
     {
+        int goc = num5;
+        int nguoc = 0;
+        while (num5 != 0)
+        {
+            int digit = num5 % 10;
+            nguoc = nguoc * 10 + digit;
+            num5 /= 10;
+        }
+        return goc == nguoc;
+    }
+
+    public static void hienThiSoDoiXung()
+    {
+        System.out.println("Nhap so muon kiem tra:");
         int num5 = sc.nextInt();
-        if (num5 < 0)
-        {
-            System.out.println("So khong phai la so Palindrome");
-            return;
-        }
-        int temp = num5;
-        int reverse = 0;
-        while (temp != 0)
-        {
-            reverse = reverse * 10 + temp % 10;
-            temp /= 10;
-        }
-        if (reverse == num5)
-        {
-            System.out.println("So la so Palindrome");
-        }
-        else System.out.println("So khong phai la so Palindrome");
+        if (isPalindrome(num5)) System.out.printf("%d la so Palindrome", num5);
+        else System.out.printf("%d khong phai la so Palindrome", num5);
     }
 
     // Hàm xuất mảng cho bài 5 và bài 10
@@ -354,5 +357,6 @@ public class Buoi11_12
         phanTichThuaSoNguyenTo(num3);
 
         soHoanHao(); // Bài 27
+        hienThiSoDoiXung(); // Bài 30
     }
 }
