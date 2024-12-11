@@ -1,8 +1,8 @@
-package Buoi11_12;
+package Buoi11Den13;
 
 import java.util.Scanner;
 
-public class Buoi11_12
+public class Buoi11Den13
 {
     private static final Scanner sc = new Scanner(System.in);
 
