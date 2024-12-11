@@ -289,6 +289,29 @@ public class Buoi11_12
         else System.out.printf("%d khong phai la so hoan hao", num4);
     }
 
+    // Bài 30: Kiểm tra số đối xứng palindrome
+    public static void soPalindrome()
+    {
+        int num5 = sc.nextInt();
+        if (num5 < 0)
+        {
+            System.out.println("So khong phai la so Palindrome");
+            return;
+        }
+        int temp = num5;
+        int reverse = 0;
+        while (temp != 0)
+        {
+            reverse = reverse * 10 + temp % 10;
+            temp /= 10;
+        }
+        if (reverse == num5)
+        {
+            System.out.println("So la so Palindrome");
+        }
+        else System.out.println("So khong phai la so Palindrome");
+    }
+
     // Hàm xuất mảng cho bài 5 và bài 10
     public static void xuatMang(int h[])
     {
