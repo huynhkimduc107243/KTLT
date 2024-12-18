@@ -7,13 +7,12 @@ public class Bai14 {
     // Bài 14: Số lớn nhất trong 3 số
     public static void soLonNhat()
     {
-        Scanner sc = new Scanner(System.in);
         int a = 0, b = 0, c = 0;
         while (true)
         {
             try
             {
-                System.out.print("\nNhap 3 so a, b, c: ");
+                System.out.print("Nhap 3 so a, b, c: ");
                 a = sc.nextInt();
                 b = sc.nextInt();
                 c = sc.nextInt();

@@ -27,6 +27,7 @@ public class Bai30 {
         Scanner sc = new Scanner(System.in);
         System.out.println("Nhap so muon kiem tra:");
         int num5 = sc.nextInt();
+        sc.close();
         if (isPalindrome(num5)) System.out.printf("%d la so Palindrome", num5);
         else System.out.printf("%d khong phai la so Palindrome", num5);
     }

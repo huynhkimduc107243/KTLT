@@ -8,6 +8,7 @@ public class Bai3 {
     {
         Scanner sc = new Scanner(System.in);
         System.out.print("Nhap so N: ");
+        sc.close();
         int N = 0;
         try
         {

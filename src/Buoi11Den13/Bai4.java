@@ -27,6 +27,7 @@ public class Bai4 {
         Scanner sc = new Scanner(System.in);
         System.out.print("\n\nNhap so muon kiem tra: ");
         int num1 = sc.nextInt();
+        sc.close();
         kiemTraKhongDeQuy(num1);
     }
 }

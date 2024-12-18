@@ -30,6 +30,7 @@ public class Bai6 {
         int e = sc.nextInt();
         int f = sc.nextInt();
         int g = sc.nextInt();
+        sc.close();
         System.out.printf("Tong giai thua cua cac so %d, %d, %d, %d la: %d", d, e, f, g, tongCacGiaiThua(d, e, f, g));
     }
 }

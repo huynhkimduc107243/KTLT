@@ -25,6 +25,7 @@ public class Bai27 {
                 sc.next();
             }
         }
+        sc.close();
 
         /*
          * i chạy từ 1 đến num4 - 1, nếu num4 chia hết cho i thì cộng i vào sum

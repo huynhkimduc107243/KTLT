@@ -24,6 +24,7 @@ public class Bai18 {
         Scanner sc = new Scanner(System.in);
         System.out.print("\nSo muon phan tich: ");
         int num3 = sc.nextInt();
+        sc.close();
         phanTichThuaSoNguyenTo(num3);
     }
 }

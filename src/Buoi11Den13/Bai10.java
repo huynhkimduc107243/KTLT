@@ -32,6 +32,6 @@ public class Bai10 {
     public static void main(String[] args) {
         int[] h = {5, 3, 8, 6, 2};
         System.out.println("Mang sau khi sap xep giam dan: ");
-        mangGiamDan(null);
+        mangGiamDan(h);
     }
 }
