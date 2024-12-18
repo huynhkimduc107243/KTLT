@@ -11,7 +11,7 @@ import java.util.Scanner;
      * c. Tìm và in ra các phần tử là số nguyên tố (các phần tử không phải là 
      * số nguyên tố được thay bằng số 0)
      */
-    
+
 public class Bai35
 {
     public static int[][] nhapMaTran() {
@@ -63,7 +63,7 @@ public class Bai35
     }
 
     public static void main(String[] args) {
-        int a[][] = nhapMaTran();
-        xuatMaTran(a);
+        int matran[][] = nhapMaTran();
+        xuatMaTran(matran);
     }
 }
