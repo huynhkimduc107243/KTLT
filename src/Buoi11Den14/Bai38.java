@@ -2,10 +2,7 @@ package Buoi11Den14;
 
 import java.util.Scanner;
 
-public class Bai38 {
-    public static final Scanner sc = new Scanner(System.in);
-
-    /*
+/*
      * Bài 38. Viết chương trình nhập vào mảng A gồm n phần tử, các phần tử là những
      * số nguyên lớn hơn 0 và nhỏ hơn 100 được nhập từ bàn phím. Thực hiện các yêu cầu sau:
      * a. Tìm phần tử lớn thứ 2 cùng với chỉ số.
@@ -13,6 +10,9 @@ public class Bai38 {
      * c. Nhập số nguyên x và chèn x vào mảng A sao cho vẫn đảm bảo thứ tự sắp xếp
      * giảm dần của mảng A.
      */
+
+public class Bai38 {
+    public static final Scanner sc = new Scanner(System.in);
 
     public static int[] nhapMang() {
         int n; // Kích thước mảng
