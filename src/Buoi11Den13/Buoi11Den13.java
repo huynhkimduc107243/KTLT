@@ -380,7 +380,7 @@ public class Buoi11Den13
         }
     }
 
-    public static void int[][] nhapMang2Chieu()
+    public static int[][] nhapMang2Chieu()
     {
         int num7 = 0, num8 = 0;
         while (true)
@@ -418,8 +418,8 @@ public class Buoi11Den13
                 }
             }
         }
-        return arr2;
-
+            return arr2;
+        }
 
     public static void main(String[] args)
     {
