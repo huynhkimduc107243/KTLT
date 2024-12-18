@@ -307,7 +307,7 @@ public class Buoi11Den13
         return goc == nguoc;
     }
 
-    public static void hienThiSoDoiXung()
+    public static void ketQuaDoiXung()
     {
         System.out.println("Nhap so muon kiem tra:");
         int num5 = sc.nextInt();
@@ -315,6 +315,62 @@ public class Buoi11Den13
         else System.out.printf("%d khong phai la so Palindrome", num5);
     }
 
+    public static void hienThiSoDoiXung(int num5)
+    {
+        System.out.println("Dao nguoc cua so " + num5 + " la: ");
+        while (num5 != 0)
+        {
+            System.out.println(num5 % 10);
+            num5 /= 10;
+            
+        }
+    }
+
+    public static int[] nhapMang()
+    {
+        int num6 = 0;
+        while (true)
+        {
+            try
+            {
+                System.out.print("Nhap so phan tu cua mang: ");
+                num6 = Integer.parseInt(sc.nextLine());
+                break;
+            }
+            catch (Exception e)
+            {
+                System.out.println("Gia tri khum hop le, hay nhap lai");
+                sc.next();
+            }
+        }
+        int[] arr = new int[num6];
+        for (int i = 0; i < num6; i++)
+        {
+            try
+            {
+                System.out.println("Nhap phan tu thu " + (i + 1) + ": ");
+                arr[i] = Integer.parseInt(sc.nextLine());
+                if (arr[i] > 0 && arr[i] < 100) continue;
+                else System.out.println("Gia tri khong hop le, hay nhap lai");
+            }
+            catch (Exception e)
+            {
+                System.out.println("Gia tri khong hop le, hay nhap lai");
+                sc.next();
+            }
+        }
+        return arr;
+    }
+
+    public static void hienThiMang()
+    {
+        int[] arr = nhapMang();
+        System.out.println("Mang vua nhap la: ");
+        for (int i = 0; i < arr.length; i++)
+        {
+            System.out.println(arr[i]);
+        }
+    }
     // Hàm xuất mảng cho bài 5 và bài 10
     public static void xuatMang(int h[])
     {
@@ -324,9 +380,50 @@ public class Buoi11Den13
         }
     }
 
+    public static void int[][] nhapMang2Chieu()
+    {
+        int num7 = 0, num8 = 0;
+        while (true)
+        {
+            try
+            {
+                System.out.print("Nhap so hang cua mang: ");
+                num7 = Integer.parseInt(sc.nextLine());
+                System.out.print("Nhap so cot cua mang: ");
+                num8 = Integer.parseInt(sc.nextLine());
+                break;
+            }
+            catch (Exception e)
+            {
+                System.out.println("Gia tri khong hop le, hay nhap lai");
+                sc.next();
+            }
+        }
+        int[][] arr2 = new int[num7][num8];
+        for (int i = 0; i < num7; i++)
+        {
+            for (int j = 0; j < num8; j++)
+            {
+                try
+                {
+                    System.out.println("Nhap phan tu thu " + (i + 1) + ", " + (j + 1) + ": ");
+                    arr2[i][j] = Integer.parseInt(sc.nextLine());
+                    if (arr2[i][j] > 0 && arr2[i][j] < 100) continue;
+                    else System.out.println("Gia tri khong hop le, hay nhap lai");
+                }
+                catch (Exception e)
+                {
+                    System.out.println("Gia tri khong hop le, hay nhap lai");
+                    sc.next();
+                }
+            }
+        }
+        return arr2;
+
+
     public static void main(String[] args)
     {
-        int[] h = {5, 3, 8, 6, 2}; // Mảng cho bài 5 và 10
+        /* int[] h = {5, 3, 8, 6, 2}; // Mảng cho bài 5 và 10
 
         kiemTraTamGiac(); // Bài 2
         tongCacSoChan(); // Bài 3
@@ -357,6 +454,7 @@ public class Buoi11Den13
         phanTichThuaSoNguyenTo(num3);
 
         soHoanHao(); // Bài 27
-        hienThiSoDoiXung(); // Bài 30
+        ketQuaDoiXung(); // Bài 30 */
+        nhapMang();
     }
 }
