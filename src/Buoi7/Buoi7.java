@@ -4,6 +4,8 @@ import java.util.Scanner;
 
 public class Buoi7
 {
+    public static final Scanner sc = new Scanner(System.in);
+    
     public static void hienThiGiaTri(int n)
     {
         System.out.print("Danh sach cac phan tu la: ");
@@ -19,7 +21,6 @@ public class Buoi7
     public static int nhapSoNguyen()
     {
         int n = 0;
-        Scanner sc = new Scanner(System.in);
         while(true)
         {
             try
@@ -39,7 +40,6 @@ public class Buoi7
 
     public static float nhapDiem()
     {
-        Scanner sc = new Scanner(System.in);
         float diem = 0;
 
         while (true)
@@ -64,7 +64,6 @@ public class Buoi7
 
     public static float nhapTuoi()
     {
-        Scanner sc = new Scanner(System.in);
         float tuoi = 0;
 
         while (true)
