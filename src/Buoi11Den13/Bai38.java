@@ -13,6 +13,7 @@ public class Bai38 {
      * c. Nhập số nguyên x và chèn x vào mảng A sao cho vẫn đảm bảo thứ tự sắp xếp
      * giảm dần của mảng A.
      */
+
     public static int[] nhapMang() {
         int n; // Kích thước mảng
         while (true) {
@@ -120,18 +121,43 @@ public class Bai38 {
     }
 
     // c. Nhập số nguyên x và chèn x vào mảng A sao cho vẫn đảm bảo thứ tự sắp xếp giảm dần của mảng A.
-    public static void chenPhanTu(int a[], int x)
+    public static int [] chenPhanTu(int a[], int x)
     {
-        int n = a.length; // 
-        int b[] = new int[n + 1];
-        int i = 0;
-        while (i < n && a[i] > x)
+        int tam[] = new int[a.length + 1];
+        System.arraycopy(a, 0, tam, 0, a.length);
+        // Tìm vị trí chèn x
+        int viTri = 0;
+        for (int i = 0; i < tam.length; i++)
         {
-            b[i] = a[i];
-            i++;
+            if (x > tam[i]) viTri = i + 1;
+            else break;
         }
+        // Dời các phần tử phía sau vị trí chèn
+        for (int i = tam.length - 1; i > viTri; i--)
+        {
+            tam[i] = tam[i - 1];
+        }
+        tam[viTri] = x;
+        return tam;
+    }
 
-
+    public static void nhapSoNguyen()
+    {
+        int x;
+        while (true)
+        {
+            try
+            {
+                System.out.print("Nhap so nguyen x: ");
+                x = Integer.parseInt(sc.nextLine());
+                break;
+            }
+            catch (Exception e)
+            {
+                System.out.println("Gia tri khong hop le!");
+                sc.next();
+            }
+        }
     }
 
     public static void main(String[] args) {
@@ -143,5 +169,8 @@ public class Bai38 {
         // Sắp xếp mảng giảm dần
         xuatMangGiamDan(arr);
         // Chèn phần tử x vào mảng sao cho vẫn giữ nguyên thứ tự giảm dần
+        int tam[] = chenPhanTu(mang, num);
+        System.out.println("Mang sau khi chen phan tu x la: ");
+        xuatMang(tam);
     }
 }
